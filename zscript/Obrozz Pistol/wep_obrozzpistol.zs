@@ -31,6 +31,7 @@ class ObrozzPistol:HDHandgun{
 		hdweapon.barrelsize 20,1,2;//rifle's been cut in half, basically
 		hdweapon.refid "obz";
 		tag "$TAG_OBROZZ";
+		inventory.pickupmessage "$PICKUP_OBROZZ";
 
 		hdweapon.loadoutcodes "
 			\cucustomchamber - 0/1, whether to reduce jam for less power
@@ -48,10 +49,6 @@ class ObrozzPistol:HDHandgun{
 		else if(!random(0,4))ibg++;
 		invoker.weaponstatus[OBROZZS_GRIME]=clamp(ibg,0,100);
 		//if(hd_debug)A_Log(string.format("Boss grit level: %i",invoker.weaponstatus[OBROZZS_GRIME]));
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_OBROZZ");
 	}
 
 

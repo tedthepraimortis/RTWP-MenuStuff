@@ -17,6 +17,7 @@ class HDSingleActionRevolver:HDHandgun{
 		weapon.bobstyle "normal";
 		obituary "$OB_RSA";
 		tag "$TAG_SINGLEACTREV";
+		inventory.pickupmessage "$PICKUP_SINGLEACTIONREVOLVER";
 		hdweapon.refid "rsa";//revolver, single action
 		hdweapon.barrelsize 22,0.3,0.5; //twice the barrel length
 	}
@@ -28,10 +29,6 @@ class HDSingleActionRevolver:HDHandgun{
 			else if(wi==SING_NINEMIL)blk+=0.15;
 		}
 		return blk+6;
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_SINGLEACTIONREVOLVER");
 	}
 
 	override double weaponbulk(){

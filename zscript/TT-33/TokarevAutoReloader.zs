@@ -125,14 +125,10 @@ class TokarevAutoReloader:TokarevAutoReloadingThingy{
 		+inventory.invbar
 		+hdweapon.fitsinbackpack
 		inventory.pickupsound "misc/w_pkup";
-    //	inventory.pickupmessage "You got the 7.62 Tokarev reloading machine! Own the means of production!";
 		scale 0.5;
 		hdweapon.refid "RT7";
+		inventory.pickupmessage "$PICKUP_TOKRELOADER";
 		tag "$TAG_TOKRELOADER";
-	}
-
-    override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_TOKRELOADER");
 	}
 
 	override double gunmass(){return 0;}

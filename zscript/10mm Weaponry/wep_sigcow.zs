@@ -708,12 +708,9 @@ class HD10mMag8:HDMagAmmo{
 		hdmagammo.magbulk enc_10MAG_EMPTY; 
 		scale 0.35;
 		tag "$TAG_10PISMAG";
+		inventory.pickupmessage "$PICKUP_10MAG8";
 		hdpickup.refid "SC8";
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_10MAG8");
-	}
+	}\
 
 	override string,string,name,double getmagsprite(int thismagamt){
 		string magsprite=(thismagamt>0)?"SC15A0":"SC15C0";
@@ -742,12 +739,9 @@ class HD10mMag25:HD10mMag8{
         scale 0.35;
 		hdmagammo.maxperunit 25;
 		hdmagammo.magbulk enc_10mag25_EMPTY;
+		inventory.pickupmessage "$PICKUP_10MAG25";
 		tag "$TAG_SCWMAG";
 		hdpickup.refid "S25";
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_10MAG25");
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){

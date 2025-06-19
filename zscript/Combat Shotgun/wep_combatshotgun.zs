@@ -16,6 +16,7 @@ class HDCombatShotgun:HDShotgun{ //hope you're good at pumping ;)
 		scale 0.6;
 		hdweapon.barrelsize 25,0.5,2;//30-5=25, shorter because there's no stock
 		hdweapon.refid "CSG";
+		inventory.pickupmessage "$PICKUP_COMBATSHOTGUN";
 		tag "$TAG_COMBATSHOTGUN";
 		obituary "$OB_COMBATSHOTGUN";
 	}
@@ -23,10 +24,6 @@ class HDCombatShotgun:HDShotgun{ //hope you're good at pumping ;)
 	override void postbeginplay(){
 		super.postbeginplay();
 		weaponspecial=1337;
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_COMBATSHOTGUN");
 	}
 
 	//returns the power of the load just fired

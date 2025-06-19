@@ -20,14 +20,12 @@ class HushpuppyPistol:HDHandgun{
 		weapon.bobstyle "normal";
 		obituary "$OB_PUP";
 		tag "$TAG_HPUPPY";
+		inventory.pickupmessage "$PICKUP_HUSHPUPPY";
 		hdweapon.refid "pup";
 		hdweapon.barrelsize 29,0.3,0.5;//was 19
 		//extended barrel length to account for silencer
 
         //no loadout codes
-	}
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_HUSHPUPPY");
 	}
 	override double weaponbulk(){
 		int mgg=weaponstatus[PUPPY_MAG];

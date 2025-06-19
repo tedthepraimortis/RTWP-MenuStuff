@@ -120,12 +120,11 @@ class SavageAutoReloader:SavageAutoReloadingThingy{
 		+inventory.invbar
 		+hdweapon.fitsinbackpack
 		inventory.pickupsound "misc/w_pkup";
-		inventory.pickupmessage "You got the Savage reloading machine!";
+		inventory.pickupmessage "$PICKUP_SAVAGE_RELOADER";
 		scale 0.5;
 		hdweapon.refid "srd";
-		tag "Savage .300 Reloading Device";
+		tag "$TAG_SAVAGE_RELOADER";
 	}
-//	override string PickupMessage() {String pickupmessage = Stringtable.Localize("$PICKUP_RELOADER"); return pickupmessage;}
 	override double gunmass(){return 0;}
 	override double weaponbulk(){
 		return 20*amount;

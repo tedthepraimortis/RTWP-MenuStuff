@@ -50,14 +50,13 @@ class Savage99SniperRifle:HDWeapon{
 		hdweapon.barrelsize 40,1,2;
 		hdweapon.refid HDLD_S99;
 		tag "$TAG_S99";
+		inventory.pickupmessage "$PICKUP_S99";
 
 		hdweapon.loadoutcodes "
 			\cufrontreticle - 0/1, whether crosshair scales with zoom
 			\cubulletdrop - 0-600, amount of compensation for bullet drop
 			\cuzoom - 5-60, 10x the resulting FOV in degrees";
 	}
-	
-	override string PickupMessage(){return Stringtable.Localize("$PICKUP_S99");}
 
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}

@@ -99,6 +99,7 @@ TAG_TOKRELOADER = "7mm Tokarev Auto-Reloader";
 TAG_PPSH41MAG35 = "PPSh-41 Magazine";
 TAG_PPSH41MAG71 = "PPSh-41 Drum";
 TAG_TT33MAG = "TT-33 Magazine";
+TAG_SAVAGE_RELOADER = "Savage .300 Reloading Device";
 
 // Item Pickups, same as Weapon Pickups but this time it's not a weapon. - [Ted]
 PICKUP_10MAG25 = "Picked up a Sig-Cow magazine.";
@@ -111,6 +112,7 @@ PICKUP_PPSH41MAG35 = "Picked up a PPSh-41 magazine.";
 PICKUP_PPSH41MAG71 = "Picked up a PPSh-41 drum.";
 PICKUP_TT33MAG = "Picked up a TT-33 magazine.";
 PICKUP_TOKRELOADER = "You got the Tokarev reloading machine! Own the means of production!";
+PICKUP_SAVAGE_RELOADER = "You got the Savage reloading machine!";
 
 // Obituaries, useful for other mod developers. Like myself. - [Ted]
 OB_STUNGUN = "%o got fried by %k's stun gun.";

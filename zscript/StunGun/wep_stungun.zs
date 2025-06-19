@@ -26,12 +26,10 @@ class HDStunGun:HDWeapon{//Tasers and stun guns are not the same, apparently
 		hdweapon.refid HDLD_STUNGUN;
 		tag "$TAG_STUNGUN";
 		obituary "$OB_STUNGUN";
+		inventory.pickupmessage "$PICKUP_STUNGUN";
 	}
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_STUNGUN");
-	}
 	override string,double getpickupsprite(){return "TASRA0",0.7;}
 	
 	int walldamagemeter;//strip out all wallcutting code

@@ -128,6 +128,7 @@ class PlasmaBuster:HDCellWeapon{
 		hdweapon.barrelsize 35,1.6,3;
 		hdweapon.refid "d93";
 		tag "$TAG_DM93PLASMA";
+		inventory.pickupmessage "$PICKUP_PLASMABUSTER";
 	}
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
@@ -135,10 +136,6 @@ class PlasmaBuster:HDCellWeapon{
 	override void tick(){
 		super.tick();
 		drainheat(TBS_HEAT,12);
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_PLASMABUSTER");
 	}
 
 	override double gunmass(){

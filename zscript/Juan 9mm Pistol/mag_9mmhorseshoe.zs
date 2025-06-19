@@ -13,12 +13,8 @@ class HDHorseshoe9m:HDMagAmmo{
 		hdmagammo.roundbulk ENC_9_LOADED;
 		hdmagammo.magbulk ENC_9MAG_EMPTY*4;
 		tag "$TAG_JUANMAG";
-//		inventory.pickupmessage "Picked up a horseshoe pistol magazine.";
+		inventory.pickupmessage "$PICKUP_JUANMAG";
 		hdpickup.refid "j30";
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_JUANMAG");
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt)

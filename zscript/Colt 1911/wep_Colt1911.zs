@@ -17,14 +17,10 @@ class HDColt1911:HDHandgun{
 		weapon.bobspeed 2.5;
 		weapon.bobstyle "normal";
 		obituary "$OB_COLT1911";
-//		inventory.pickupmessage "You got the Colt 1911! Semper Fi!";
+		inventory.pickupmessage "$PICKUP_COLT1911";
 		tag "$TAG_C19";
 		hdweapon.refid "c19";
 		hdweapon.barrelsize 19,0.3,0.5;
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_COLT1911");
 	}
 
 	override double weaponbulk(){

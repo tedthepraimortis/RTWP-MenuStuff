@@ -17,6 +17,7 @@ class HDSnubNoseRevolver:HDHandgun{
 		weapon.bobstyle "normal";
 		obituary "$OB_SNUBNOSE";
 		tag "$TAG_SNUBNOSE";
+		inventory.pickupmessage "$PICKUP_DETECTIVESPECIAL";
 		hdweapon.refid "snb";
 		hdweapon.barrelsize 16,0.3,0.5; //very short barrel, duh
 	}
@@ -34,10 +35,6 @@ class HDSnubNoseRevolver:HDHandgun{
 			else if(wi==SNBN_NINEMIL)blk+=0.1;
 		}
 		return blk+3.5;
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_DETECTIVESPECIAL");
 	}
 
 	override double weaponbulk(){

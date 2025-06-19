@@ -20,11 +20,11 @@ class HDFP45:HDHandgun{
 		weapon.bobstyle "normal";
 		obituary "$OB_FP45";
 		tag "$TAG_FP45";
+		inventory.pickupmessage "$PICKUP_FP45";
 		hdweapon.refid HDLD_FP45;
 		hdweapon.barrelsize 6,0.3,0.5;
 	}
 	
-	override string pickupmessage(){return Stringtable.Localize("$PICKUP_FP45");}
     override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
 

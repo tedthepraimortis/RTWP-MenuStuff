@@ -16,7 +16,7 @@ class HD10mmPistol:HDHandgun{
 		weapon.bobspeed 2.5;
 		weapon.bobstyle "normal";
 		obituary "$OB_10MMPISTOL";
-//		inventory.pickupmessage "You got the 10mm pistol! It really packs a punch!";
+		inventory.pickupmessage "$PICKUP_10MMPISTOL";
 		tag "$TAG_10PIS";
 		hdweapon.refid "p1m";//Pistol, 10 millimeter.
 		hdweapon.barrelsize 19,0.3,0.5;
@@ -24,10 +24,6 @@ class HD10mmPistol:HDHandgun{
 		hdweapon.loadoutcodes "
 			\cuselectfire - 0/1, whether it has a fire selector
 			\cufiremode - 0/1, semi/auto, subject to the above";
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_10MMPISTOL");
 	}
 
 	override double weaponbulk(){

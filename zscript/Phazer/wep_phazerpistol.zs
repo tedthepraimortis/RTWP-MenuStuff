@@ -19,6 +19,7 @@ class PhazerPistol:HDHandgun{
 		weapon.slotpriority 5;
 		weapon.ammouse 1;
 		scale 0.6;
+		inventory.pickupmessage "$PICKUP_PHAZER";
 		obituary "$OB_PHAZER";
 		hdweapon.barrelsize 19,1.6,3;
 		hdweapon.refid "PHZ";
@@ -43,11 +44,6 @@ class PhazerPistol:HDHandgun{
 		    }// battery drains faster if capacitor runs low
 	}	     // as a penalty for spamming shots
 	
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_PHAZER");
-	}
-
 	override double gunmass(){
 		return 5+(weaponstatus[PHAZER_BATTERY]<0?0:1);
 	}

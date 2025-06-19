@@ -16,12 +16,10 @@ class HDGoldSingleActionRevolver:HDHandgun{
 		weapon.bobspeed 2.5;
 		weapon.bobstyle "normal";
 		obituary "$OB_GOLDENGUN";
+		inventory.pickupmessage "$PICKUP_GOLDENSINGLEACTION";
 		tag "$TAG_GOLDSINGLEACTION";
 		hdweapon.refid "gsa";//golden single action
 		hdweapon.barrelsize 20,0.3,0.5;
-	}
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_GOLDENSINGLEACTION");
 	}
 	override double gunmass(){
 		double blk=0;

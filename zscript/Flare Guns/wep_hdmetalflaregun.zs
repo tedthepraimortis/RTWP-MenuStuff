@@ -9,10 +9,8 @@ class MetalFireBlooper: FireBlooper
 	{
 		obituary "$OB_METALFLAREGUN";
 		tag "$TAG_METALFLAREGUN";
+		inventory.pickupmessage "$PICKUP_METALFLAREGUN";
 		hdweapon.refid "fgm";
-	}
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_METALFLAREGUN");
 	}
 
 

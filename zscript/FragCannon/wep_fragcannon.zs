@@ -16,12 +16,9 @@ class FragCannon:HDWeapon{
 		scale 0.6;
 		obituary "$OB_FRAGCANNON";
 		hdweapon.barrelsize 24,1.6,3;
+		inventory.pickupmessage "$PICKUP_FRAGCANNON";
 		tag "$TAG_FRAGCANNON";
 		hdweapon.refid "FCN";
-	}
-	
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_FRAGCANNON");
 	}
 	
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}

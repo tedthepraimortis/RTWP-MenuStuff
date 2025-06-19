@@ -1044,13 +1044,10 @@ class HDDynamiteAmmo:HDAmmo{
 		scale 0.3;
 		inventory.maxamount 50;
 		inventory.pickupsound "weapons/pocket";
+		inventory.pickupmessage "$PICKUP_DYNAMITE";
 		tag "$TAG_DYNAMITEBUNDLE";
 		hdpickup.refid "DYN";
 		hdpickup.bulk ENC_DYNAMITE;
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_DYNAMITE");
 	}
 	
 	//inv code borrowed from Melonades grenade pack

@@ -24,6 +24,7 @@ class HDStenMk2:HDWeapon{
 		hdweapon.barrelsize 21,0.5,1;
 		hdweapon.refid HDLD_STEN;
 		tag "$TAG_STEN";
+		inventory.pickupmessage "$PICKUP_STENMK2";
 		inventory.icon "STNPA0";
 		//no configs, WYSIWYG
 	}
@@ -36,9 +37,6 @@ class HDStenMk2:HDWeapon{
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
 	override double gunmass(){
 		return 5+((weaponstatus[STENS_MAG]<0)?-0.5:(weaponstatus[STENS_MAG]*0.05));
-	}
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_STENMK2");
 	}
 	override double weaponbulk(){
 		int mg=weaponstatus[STENS_MAG];

@@ -17,13 +17,9 @@ class HDTokarevMag71:HDMagAmmo{
 		hdmagammo.roundbulk ENC_762TOKAREV_LOADED;
 		hdmagammo.magbulk ENC_TOKAREV_DRUM_EMPTY;
 		tag "$TAG_PPSH41MAG71";
+		inventory.pickupmessage "$PICKUP_PPSH41MAG71";
 		hdpickup.refid "tm7";
 	}
-    
-    	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_PPSH41MAG71");
-	}
-
 	
 	override string,string,name,double getmagsprite(int thismagamt)
 	{
@@ -62,12 +58,8 @@ class HDTokarevMag35:HDMagAmmo{
 		hdmagammo.roundbulk ENC_762TOKAREV_LOADED;
 		hdmagammo.magbulk ENC_TOKAREV_BOX_EMPTY;
 		tag "$TAG_PPSH41MAG35";
-	//	inventory.pickupmessage "Picked up a PPSh-41 box magazine.";
+		inventory.pickupmessage "$PICKUP_PPSH41MAG35";
 		hdpickup.refid "tm3";
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_PPSH41MAG35");
 	}
 
 	

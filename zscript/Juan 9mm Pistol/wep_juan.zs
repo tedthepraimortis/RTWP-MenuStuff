@@ -22,6 +22,7 @@ class HDHorseshoePistol:HDHandgun{
 		weapon.bobstyle "normal";
 		obituary "$OB_JUAN";
 		tag "$TAG_JUANPIS";
+		inventory.pickupmessage "$PICKUP_JUANPISTOL";
 		hdweapon.refid "jua";
 		hdweapon.barrelsize 19,0.3,0.5;
 
@@ -33,10 +34,6 @@ class HDHorseshoePistol:HDHandgun{
 	override void postbeginplay(){
 		super.postbeginplay();
 		weaponspecial=1337;
-	}
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_JUANPISTOL");
 	}
 
 	override double weaponbulk(){

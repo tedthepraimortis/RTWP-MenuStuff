@@ -18,6 +18,7 @@ class HDPPSh41 :HDWeapon{//this shouldn't inherit from HDHandgun, that was an ov
 		weapon.bobstyle "normal";
 		obituary "$OB_PPSH41";
 		tag "$TAG_PPSH41";
+		inventory.pickupmessage "$PICKUP_PPSH41";
 		hdweapon.refid "pps";
 		hdweapon.barrelsize 30,0.3,0.4;
 	    inventory.icon "PS41C0";
@@ -34,10 +35,6 @@ class HDPPSh41 :HDWeapon{//this shouldn't inherit from HDHandgun, that was an ov
 		super.postbeginplay();
 		weaponspecial=1337;//UaS stabilizer compatibility
 		weaponstatus[0]|=PPSHF_SELECTFIRE;//full-auto enabled
-	}
-
-		override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_PPSH41");
 	}
 
 	override double weaponbulk(){

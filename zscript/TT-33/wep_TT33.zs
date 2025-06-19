@@ -14,14 +14,11 @@ class HDTokarevMag8:HDMagAmmo{
 		hdmagammo.maxperunit 8;
 		hdmagammo.roundtype "HD762TokarevAmmo";
 		hdmagammo.roundbulk ENC_762TOKAREV_LOADED;
-		hdmagammo.magbulk ENC_TOKAREV_MAG8_EMPTY; 
+		hdmagammo.magbulk ENC_TOKAREV_MAG8_EMPTY;
+		inventory.pickupmessage "$PICKUP_TT33MAG"; 
 		scale 0.35;
 		tag "$TAG_TT33MAG";
 		hdpickup.refid "TM8";
-	}
-
-    override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_TT33MAG");
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
@@ -64,6 +61,7 @@ class HDTT33Pistol:HDHandgun{
 		weapon.bobrangey 0.6;
 		weapon.bobspeed 2.5;
 		weapon.bobstyle "normal";
+		inventory.pickupmessage "$PICKUP_TT33";
 		obituary "$OB_TT33";
 		tag "$TAG_TT33";
 		hdweapon.refid "t33";
@@ -74,10 +72,6 @@ class HDTT33Pistol:HDHandgun{
 			\cufiremode - 0/1, semi/auto, subject to the above";
 	}
     int TT33_GUNDAMAGE;//tracks how messed up you gun is
-
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_TT33");
-	}
 
 	override double weaponbulk(){
 		int mgg=weaponstatus[PISS_MAG];

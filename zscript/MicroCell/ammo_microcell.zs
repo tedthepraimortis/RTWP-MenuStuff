@@ -11,6 +11,7 @@ class HDMicroCell:HDMagAmmo{
 		hdmagammo.maxperunit 10;
 		hdmagammo.roundtype "";
 		tag "$TAG_MICROCELL";
+		inventory.pickupmessage "$PICKUP_MICROCELL";
 		hdpickup.refid "MCL";
 		hdpickup.bulk ENC_BATTERY/2;
 		hdmagammo.magbulk ENC_BATTERY/2;
@@ -28,9 +29,6 @@ class HDMicroCell:HDMagAmmo{
 	int ticker;
 	int lastamount;
 	int chargemode;
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_MICROCELL");
-	}
 	override void doeffect(){
 		//testingdoeffect();return;
 		if(chargemode==BATT_UNDEFINED)chargemode=BATT_CHARGEDEFAULT;

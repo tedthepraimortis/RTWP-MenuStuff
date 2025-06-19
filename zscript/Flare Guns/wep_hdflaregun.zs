@@ -57,10 +57,8 @@ class FireBlooper : HDHandgun
 		obituary "$OB_FLAREGUN";
 		hdweapon.barrelsize 24,1.6,3;
 		tag "$TAG_FLAREGUN";
+		inventory.pickupmessage "$PICKUP_PLASTICFLAREGUN";
 		hdweapon.refid "fgn";
-	}
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_PLASTICFLAREGUN");
 	}
 
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}

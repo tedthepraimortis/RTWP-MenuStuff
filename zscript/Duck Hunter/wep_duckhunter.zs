@@ -22,15 +22,12 @@ class DuckHunter:HDShotgun{
 		scale 0.6;
 		hdweapon.barrelsize 30,0.5,2;
 		hdweapon.refid HDLD_DUCKUNT;
+		inventory.pickupmessage "$PICKUP_DUCKHUNT";
 		tag "$TAG_DUCKHUNT";
 		obituary "$OB_DUCKHUNT";
 		
 		hdweapon.loadoutcodes "
 			\cuchoke - 0-7, 0 skeet, 7 full";
-	}
-	
-	override string pickupmessage(){
-		return Stringtable.Localize("$PICKUP_DUCKHUNT");
 	}
 	
 	//returns the power of the load just fired
@@ -66,13 +63,7 @@ class DuckHunter:HDShotgun{
 		invoker.weaponstatus[DUCKHUNTS_CHAMBER]=1;
 		invoker.shotpower=shotpower;
 	}
-	/*
-	override string pickupmessage(){
-		if(weaponstatus[0]&DUCKHUNTF_CANFULLAUTO)return string.format("%s You notice some tool marks near the fire selector...",super.pickupmessage());
-		else if(weaponstatus[0]&DUCKHUNTF_EXPORT)return string.format("%s Where is the fire selector on this thing!?",super.pickupmessage());
-		return super.pickupmessage();
-	}
-	*/
+	
 	override string,double getpickupsprite(bool usespare){return "DHNT"..getpickupframe(usespare).."0",1.;}
 	override void DrawHUDStuff(HDStatusBar sb,HDWeapon hdw,HDPlayerPawn hpl){
 		if(sb.hudlevel==1){
