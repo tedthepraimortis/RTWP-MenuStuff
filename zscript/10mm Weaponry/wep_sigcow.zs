@@ -710,7 +710,7 @@ class HD10mMag8:HDMagAmmo{
 		tag "$TAG_10PISMAG";
 		inventory.pickupmessage "$PICKUP_10MAG8";
 		hdpickup.refid "SC8";
-	}\
+	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
 		string magsprite=(thismagamt>0)?"SC15A0":"SC15C0";
